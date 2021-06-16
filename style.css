@@ -1,0 +1,105 @@
+@import url(./buttons.css);
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16;
+}
+
+:root {
+    --color-primary: #05013a;
+    --color-secondary: #fff;
+}
+
+.section {
+    margin: 0;
+    height: 100vh;
+    text-align: center;
+    padding: 3rem 10rem;
+    color: var(--color-primary);
+    background-color: var(--color-secondary);
+}
+.section:nth-child(even) {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+}
+
+.section__title {
+    position: relative;
+    font-size: 3.5rem;
+}
+.section__title::after {
+    position: absolute;
+    content: '';
+    bottom: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10rem;
+    height: .55rem;
+    border-radius: 100px;
+    background-color: currentColor;
+}
+
+/* === PROFILE === */
+.section.profile {
+    padding: 2.5rem 0;
+    background-image: url(./img/fondo.jpg);
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
+.profile__section {
+    position: relative;
+    z-index: 1;
+}
+
+.profile__section::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35rem;
+    height: calc(100vh - 6rem);
+    object-fit: cover;
+    border-radius: 6rem 0 6rem;
+    box-shadow: 0 0 0 .5rem, 0 0 5rem;
+    background-color: var(--color-secondary);
+    z-index: -1;
+}
+
+.profile__img {
+    position: relative;
+    margin: auto;
+    width: 35rem;
+    height: 35rem;
+    border-radius: 6rem 0 6rem;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.profile__title {
+    font-size: 3rem;
+    font-weight: 600;
+    text-shadow: 0 0 10px #fff, 0 2px 5px;
+}
+.profile__description {
+    font-weight: 300;
+}
+
+/* === FOOTER === */
+.footer {
+    margin: 0;
+    padding: 2rem;
+    height: 50vh;
+    color: var(--color-secondary);
+    background-color: #121212;
+}
