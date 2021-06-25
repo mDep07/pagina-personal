@@ -23,6 +23,36 @@ body {
     --theme-color: #f5f5f5;
 }
 
+.float__menu {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    width: 320px;
+    height: auto;
+    background-color: var(--theme-color);
+    box-shadow: 0 2px 10px #232323;
+    border-radius: 1rem;
+    z-index: 999;
+}
+.list__menu {
+    padding: 1rem;
+    margin: 0;
+}
+.menu__item {
+    list-style-type: none;
+    text-align: right;
+}
+.menu__item a {
+    padding: 1rem .25rem;
+    display: block;
+    cursor: pointer;
+    border-radius: .25rem;
+}
+.menu__item a:hover {
+    background-color: var(--color-secondary);
+}
+
+
 .section {
     margin: 0;
     height: 100vh;
