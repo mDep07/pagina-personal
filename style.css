@@ -9,15 +9,18 @@ body {
     margin: 0;
     padding: 0;
 }
-
+html {
+    scroll-behavior: smooth;
+}
 body {
     font-family: 'Poppins', sans-serif;
     font-size: 16;
 }
 
 :root {
-    --color-primary: #05013a;
-    --color-secondary: #fff;
+    --color-primary: #00afb9;
+    --color-secondary: #0081a7;
+    --theme-color: #f5f5f5;
 }
 
 .section {
@@ -26,11 +29,11 @@ body {
     text-align: center;
     padding: 3rem 10rem;
     color: var(--color-primary);
-    background-color: var(--color-secondary);
+    background-color: var(--theme-color);
 }
 .section:nth-child(even) {
     background-color: var(--color-primary);
-    color: var(--color-secondary);
+    color: var(--theme-color);
 }
 
 .section__title {
@@ -51,10 +54,21 @@ body {
 
 /* === PROFILE === */
 .section.profile {
+    position: relative;
     padding: 2.5rem 0;
     background-image: url(./img/fondo.jpg);
     background-repeat: no-repeat;
+    background-attachment: fixed;
     object-fit: cover;
+}
+.section.profile::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(0, var( --color-primary), transparent);
 }
 .profile__section {
     position: relative;
@@ -72,7 +86,7 @@ body {
     object-fit: cover;
     border-radius: 6rem 0 6rem;
     box-shadow: 0 0 0 .5rem, 0 0 5rem;
-    background-color: var(--color-secondary);
+    background-color: var(--theme-color);
     z-index: -1;
 }
 
@@ -100,6 +114,6 @@ body {
     margin: 0;
     padding: 2rem;
     height: 50vh;
-    color: var(--color-secondary);
+    color: var(--theme-color);
     background-color: #121212;
 }
